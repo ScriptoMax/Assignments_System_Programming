@@ -1,4 +1,4 @@
-There are artifacts that include both driver file (C++ implemented, stored in "module_to_core") and execution test program (C standard 99, in "module_test") 
+There are artifacts that include both driver file (C++ implemented, stored in "module_to_core") and execution test program (C standard 99, find it in "driver_test") 
 attached to an student assignment, specifically for the university course «System programming»  
 
 OS: Linux Ubuntu v. 18.04  
