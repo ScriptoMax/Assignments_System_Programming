@@ -1,9 +1,9 @@
-There are artifacts that include both driver file (written in C++) and execution test program (written in C standard 99) 
+There are artifacts that include both driver file (C++ implemented, stored in "module_to_core") and execution test program (C standard 99, in "module_test") 
 attached to an student assignment, specifically for the university course «System programming»  
 
-OS: Linux Ubuntu v. 18.04
-Kernel version: 4.15
-IDE: CLion 2019.2
+OS: Linux Ubuntu v. 18.04  
+Kernel version: 4.15  
+IDE: CLion 2019.2  
 
 1.Linux terminal commands to generate a module file (.ko), to embed it into a kernel stuff of OS and to create a device-connected file also: 
       
@@ -55,7 +55,8 @@ ahead of running by
 ./tester
 
 Once device file gets accessed, you will be proposed to enter any text to write it to the buffer. Lets do that.
-Then, press «Enter» to see your input as a program output. If things look right, execution finishes with return code 0.
+Then, press «Enter» to see your input as a program output. If things look right, process finishes with return code 0.
+
 
 3. To reverse driver embedding / to remove the driver, switch back to driver folder, then enter command
 
