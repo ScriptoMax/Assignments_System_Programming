@@ -13,7 +13,7 @@ make
 
 2) Embed the freshly generated module into OS kernel:
 
-as being eligible to act as a superuser - insmod buffer.ko
+as being eligible to act as a superuser - insmod buffer.ko  
 as a non-priviliged user — sudo insmod buffer.ko
 
 3) See what major number was assigned when embedding:
@@ -26,7 +26,7 @@ dmesg | tail -20
 
 NOTE: instead 236, input a number which is valid since step 3 completed (that number may differ in particular applications)
 
-(superuser) mknod /dev/buffer c 236 0 
+(superuser) mknod /dev/buffer c 236 0   
 (others) sudo mknod /dev/buffer c 236 0 
 
 5) Grant extended access on device file created in step 4:
