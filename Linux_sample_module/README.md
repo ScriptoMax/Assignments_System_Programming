@@ -7,42 +7,42 @@ IDE: CLion 2019.2
 
 1.Linux terminal commands to generate a module file (.ko), to embed it into a kernel stuff of OS and to create a device-connected file also: 
       
-1) Make a module file — switch to your project folder and enter «make» command:
+-1- Make a module file — switch to your project folder and enter «make» command:
 
 make
 
-2) Embed the freshly generated module into OS kernel:
+-2- Embed the freshly generated module into OS kernel:
 
 as being eligible to act as a superuser - insmod buffer.ko  
 as a non-priviliged user — sudo insmod buffer.ko
 
-3) See what major number was assigned when embedding:
+-3- See what major number was assigned when embedding:
 
 dmesg | tail -20 
 
 (NOTE: use «dmesg» to track driver-related operations like registration, major number assignment, removal from OS kernel, error messages too)   
 
-4) Create a device file to be tested by reading and writing functions:
+-4- Create a device file to be tested by reading and writing functions:
 
 NOTE: instead 236, input a number which is valid since step 3 completed (that number may differ in particular applications)
 
 (superuser) mknod /dev/buffer c 236 0   
 (others) sudo mknod /dev/buffer c 236 0 
 
-5) Grant extended access on device file created in step 4:
+-5- Grant extended access on device file created in step 4:
  
 (superuser) chmod 777 /dev/buffer  
 (others) sudo chmod 777 /dev/buffer 
 
-6) Test writing to buffer:
+-6- Test writing to buffer:
 
 (you may push any alternative input, not just 5) echo 5 > /dev/buffer 
 
-7) If step 6 is ok, then try reading what was written in previous step:
+-7- If step 6 is ok, then try reading what was written in previous step:
 
 cat /dev/buffer
 
-8) In steps 6, 7 you are expected to have no error messages, if everything is correct you will see your input as an output once «cat» instruction is executed.
+-8- In steps 6, 7 you are expected to have no error messages, if everything is correct you will see your input as an output once «cat» instruction is executed.
 
 
 
