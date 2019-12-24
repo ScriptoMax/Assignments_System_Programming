@@ -32,7 +32,7 @@ NOTE: instead 236, input a number which is valid since step 3 completed (that nu
 5) Grant extended access on device file created in step 4:
  
 (superuser) chmod 777 /dev/buffer  
-(others) chmod 777 /dev/buffer 
+(others) sudo chmod 777 /dev/buffer 
 
 6) Test writing to buffer:
 
