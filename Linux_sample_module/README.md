@@ -38,7 +38,7 @@ NOTE: instead 236, input a number which is valid since step 3 completed (that nu
 
 (you may push any alternative input, not just 5) echo 5 > /dev/buffer 
 
-7) If step 6 is ok, then try read what was just written:
+7) If step 6 is ok, then try reading what was written in previous step:
 
 cat /dev/buffer
 
